@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title> Đạt </title>
+   <style>
+   
+    div {
+	 text-align: center;
+	}
+	
+    button {
+	 border: none;
+	 background-color: gray;
+	 font-size: 20px;
+	 font-weight: 800;
+	 padding: 10px 20px;
+	 cursor: pointer;
+	 borser-radius: 5px 15px;
+	}
+	
+	#nut {
+     position: absolute;
+     top: 600px;   
+     left: 710px; 
+    }
+	
+   </style>
+</head>
+<body>
+	<div>
+  <h1> Bật cái đèn lên coi thằng L </h1>
+  <button id="nut" onclick="toggleLight()">Bật đèn</button>
+  <img id="myImage" src="anhdentat.jpg" style="width:150px">
+</div>
+
+<script>
+  let denBat = false;
+
+  function toggleLight() {
+    const img = document.getElementById("myImage");
+    const nut = document.getElementById("nut");
+
+    if (denBat) {
+      img.src = "anhdentat.jpg";
+      nut.innerText = "Bật đèn";
+      denBat = false;
+    } else {
+      img.src = "anhdensang.jpg";
+      nut.innerText = "Tắt đèn";
+      denBat = true;
+    }
+  }
+</script>
+</body>
+</html>
